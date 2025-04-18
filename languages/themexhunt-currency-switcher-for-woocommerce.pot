@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-17 08:02+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: themexhunt-currency-switcher-for-woocommerce.php:57
+msgid "This plugin requires WooCommerce to be installed and activated."
+msgstr ""
+
+#: themexhunt-currency-switcher-for-woocommerce.php:58
+msgid "Plugin Dependency Error"
+msgstr ""
+
+#: includes/class-currency-admin.php:16
+msgid "Currency Switcher Settings"
+msgstr ""
+
+#: includes/class-currency-admin.php:17
+msgid "TMXH Currency Switcher"
+msgstr ""
+
+#: includes/class-currency-admin.php:82
+msgid "Enable Currency Switcher"
+msgstr ""
+
+#: includes/class-currency-admin.php:89
+msgid "Manual Currency Rates"
+msgstr ""
+
+#: includes/class-currency-admin.php:93
+msgid "Hide?"
+msgstr ""
+
+#: includes/class-currency-admin.php:94
+msgid "Currency"
+msgstr ""
+
+#: includes/class-currency-admin.php:95
+msgid "Position"
+msgstr ""
+
+#: includes/class-currency-admin.php:96
+msgid "Rate"
+msgstr ""
+
+#: includes/class-currency-admin.php:97
+msgid "Symbol"
+msgstr ""
+
+#: includes/class-currency-admin.php:98
+msgid "Payment Gatway"
+msgstr ""
+
+#: includes/class-currency-admin.php:99
+msgid "Action"
+msgstr ""
+
+#: includes/class-currency-admin.php:136
+msgid "All Gateways"
+msgstr ""
+
+#: includes/class-currency-admin.php:148
+msgid "Remove"
+msgstr ""
+
+#: includes/class-currency-admin.php:155
+msgid "Add Currency"
+msgstr ""
+
+#: includes/class-currency-admin.php:260
+msgid "Shortcode"
+msgstr ""
+
+#: includes/class-currency-admin.php:262
+msgid "Use this shortcode anywhere:"
+msgstr ""
+
+#: includes/class-currency-admin.php:265
+msgid "Copy"
+msgstr ""
+
+#: includes/class-currency-admin.php:279 includes/class-currency-admin.php:291
+#: includes/class-currency-admin.php:336
+msgid "Currency Switcher"
+msgstr ""
+
+#: includes/class-currency-admin.php:324
+msgid "Add to Menu"
+msgstr ""
+
+#: includes/class-currency-widget.php:15
+msgid "WooCommerce Currency Switcher"
+msgstr ""
+
+#: includes/class-currency-widget.php:16
+msgid "A currency switcher for WooCommerce."
+msgstr ""

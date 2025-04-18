@@ -1,0 +1,4 @@
+/* Currency Switcher Menu Item Styling */
+li.tmxhnt-currency-switcher-item select {
+  min-width: 80px;
+}
