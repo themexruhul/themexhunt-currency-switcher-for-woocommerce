@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: ThemexHunt Currency Switcher for WooCommerce
- * Plugin URI:  https://themexhunt.com/themexhunt-currency-switcher-for-woocommerce/
+ * Plugin URI:  https://github.com/themexruhul/themexhunt-currency-switcher-for-woocommerce
  * Description: A currency switcher for WooCommerce with manual rates and formatting options.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      ThemexHunt
  * Author URI:  https://themexhunt.com/
  * License:     GPL2
