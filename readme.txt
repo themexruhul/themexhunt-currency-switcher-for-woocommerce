@@ -35,6 +35,8 @@ Yes. You can configure allowed gateways per currency under settings.
 3. Manual rate setup interface
 
 == Changelog ==
+= 1.0.2 =
+* Updated plugin URI
 
 = 1.0.1 =
 * Updated stable tag and tested up to version
