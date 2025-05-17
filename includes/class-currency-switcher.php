@@ -99,19 +99,21 @@ class Themcusw_Currency_Switcher {
      * Set the selected currency in session and cookies
      */
     public function set_currency() {
-        $currency_raw = filter_input(INPUT_GET, 'currency', FILTER_DEFAULT);
-        $nonce_raw = filter_input(INPUT_GET, 'currency_switcher_nonce', FILTER_DEFAULT);
+        // Get and sanitize input
+        $currency = isset($_GET['currency']) ? sanitize_text_field(wp_unslash($_GET['currency'])) : '';
+        $nonce = isset($_GET['currency_switcher_nonce']) ? sanitize_text_field(wp_unslash($_GET['currency_switcher_nonce'])) : '';
 
-        $currency = is_string($currency_raw) ? sanitize_text_field($currency_raw) : '';
-        $nonce = is_string($nonce_raw) ? $nonce_raw : '';
-
+        // Allow currency change only if nonce is valid
         if ($currency && $nonce && wp_verify_nonce($nonce, 'themcusw_currency_switcher')) {
-            setcookie('selected_currency', $currency, time() + 3600 * 24 * 30, '/');
+            setcookie('selected_currency', $currency, time() + MONTH_IN_SECONDS, '/');
             $_SESSION['selected_currency'] = $currency;
-        } elseif (isset($_COOKIE['selected_currency'])) {
+            return;
+        }
+        if (isset($_COOKIE['selected_currency'])) {
             $_SESSION['selected_currency'] = sanitize_text_field(wp_unslash($_COOKIE['selected_currency']));
         }
     }
+
 
 
 

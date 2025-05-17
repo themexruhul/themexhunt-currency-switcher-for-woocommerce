@@ -94,14 +94,30 @@ class Themcusw_Currency_Admin {
 
         check_admin_referer('themcusw_save_currency_settings');
 
-        $enabled_raw = filter_input(INPUT_POST, 'themcusw_currency_switcher_enable', FILTER_UNSAFE_RAW);
-        $enabled = is_string($enabled_raw) ? esc_html( wp_strip_all_tags( trim($enabled_raw) ) ) : '';
+        $enabled_raw = filter_input(INPUT_POST, 'themcusw_currency_switcher_enable', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $enabled = $enabled_raw === '1' || $enabled_raw === 'on' ? true : false;
         update_option('themcusw_currency_switcher_enable', $enabled);
 
-
-        if ( ! empty( $_POST['themcusw_currency_switcher_manual_rates'] ) && is_array( $_POST['themcusw_currency_switcher_manual_rates'] ) ) {
+        if ( !empty( $_POST['themcusw_currency_switcher_manual_rates'] ) && is_array( $_POST['themcusw_currency_switcher_manual_rates'] ) ) {
+            // Sanitize deeply
             $sanitized_rates = map_deep( wp_unslash( $_POST['themcusw_currency_switcher_manual_rates'] ), 'sanitize_text_field' );
-            update_option( 'themcusw_currency_switcher_manual_rates', $sanitized_rates );
+
+            $cleaned_rates = [];
+            foreach ( $sanitized_rates as $row ) {
+                if ( ! empty( $row['code'] ) ) {
+                    $key = $row['code']; // already sanitized by map_deep
+
+                    $cleaned_rates[ $key ] = [
+                        'hidden'   => $row['hidden'] ?? '0',
+                        'code'     => $key,
+                        'position' => $row['position'] ?? 'left',
+                        'rate'     => $row['rate'] ?? '',
+                        'symbol'   => $row['symbol'] ?? '',
+                        'gateways' => isset( $row['gateways'] ) && is_array( $row['gateways'] ) ? $row['gateways'] : [],
+                    ];
+                }
+            }
+            update_option( 'themcusw_currency_switcher_manual_rates', $cleaned_rates );
         }
 
 

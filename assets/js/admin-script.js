@@ -74,9 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <td>
                 <select name="themcusw_currency_switcher_manual_rates[row${rowIndex}][position]">
                     <option value="left">Left $99</option>
-                    <option value="left_space">Left with space $ 99</option>
                     <option value="right">Right 99$</option>
-                    <option value="right_space">Right with space 99 $</option>
                 </select>
             </td>
             <td><input type="text" name="themcusw_currency_switcher_manual_rates[row${rowIndex}][rate]" /></td>
